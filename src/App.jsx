@@ -344,7 +344,7 @@ export default function RoloTech() {
       </nav>
 
       {/* HERO */}
-      <section style={{minHeight:"100vh",position:"relative",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:isMobile?"flex-start":"center",textAlign:"center",overflow:"hidden",padding:isMobile?"66px 20px 60px":"100px 24px 80px"}}>
+      <section style={{minHeight:isMobile?"auto":"100vh",position:"relative",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:isMobile?"flex-start":"center",textAlign:"center",overflow:"hidden",padding:isMobile?"66px 20px 40px":"100px 24px 80px"}}>
         <div style={{position:"absolute",inset:0,backgroundImage:`url(${OAKLAND_BW})`,backgroundSize:"cover",backgroundPosition:"center 40%",filter:"brightness(0.35) grayscale(1)",transform:"scale(1.04)"}}/>
         <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 80% 60% at 50% 100%, rgba(10,132,255,0.22) 0%, transparent 70%)"}}/>
         <div style={{position:"absolute",bottom:0,left:0,right:0,height:"220px",background:"linear-gradient(to bottom,transparent,#000)"}}/>
@@ -386,10 +386,10 @@ export default function RoloTech() {
           </div>
         </div>
 
-        <div style={{position:"absolute",bottom:"28px",left:"calc(50% - 30px)",width:"60px",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",opacity:0.25,animation:"floatY 2.5s ease-in-out infinite",zIndex:2,pointerEvents:"none"}}>
+        {!isMobile&&<div style={{position:"absolute",bottom:"28px",left:"calc(50% - 30px)",width:"60px",display:"flex",flexDirection:"column",alignItems:"center",gap:"6px",opacity:0.25,animation:"floatY 2.5s ease-in-out infinite",zIndex:2,pointerEvents:"none"}}>
           <div style={{fontSize:"9px",letterSpacing:"0.12em",textTransform:"uppercase",color:"#fff"}}>Scroll</div>
           <div style={{width:"1px",height:"32px",background:"rgba(255,255,255,0.5)"}}/>
-        </div>
+        </div>}
       </section>
 
       {/* TICKER */}
@@ -514,7 +514,7 @@ export default function RoloTech() {
       {/* FOOTER */}
       <footer style={{borderTop:"2px solid rgba(10,132,255,0.3)",padding:isMobile?"40px 20px 36px":"52px 24px 44px",textAlign:"center",background:"linear-gradient(180deg,#040d1a 0%,#000 60%)"}}>
         <div style={{display:"flex",justifyContent:"center",marginBottom:"12px"}}>
-          <img src={LOGO_SRC} alt="Rolo Tech" style={{height:isMobile?"38px":"50px",width:"auto",objectFit:"contain"}}/>
+          <img src={LOGO_SRC} alt="Rolo Tech" style={{height:isMobile?"44px":"50px",width:"auto",objectFit:"contain"}}/>
         </div>
         <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",fontWeight:500,letterSpacing:"0.12em",marginBottom:"20px",textTransform:"uppercase"}}>
           Tires · Brakes · Alignment
