@@ -344,13 +344,13 @@ export default function RoloTech() {
       </nav>
 
       {/* HERO */}
-      <section style={{minHeight:"100vh",position:"relative",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",overflow:"hidden",padding:isMobile?"0 20px 60px":"100px 24px 80px"}}>
+      <section style={{minHeight:"100vh",position:"relative",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:isMobile?"flex-start":"center",textAlign:"center",overflow:"hidden",padding:isMobile?"66px 20px 60px":"100px 24px 80px"}}>
         <div style={{position:"absolute",inset:0,backgroundImage:`url(${OAKLAND_BW})`,backgroundSize:"cover",backgroundPosition:"center 40%",filter:"brightness(0.35) grayscale(1)",transform:"scale(1.04)"}}/>
         <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 80% 60% at 50% 100%, rgba(10,132,255,0.22) 0%, transparent 70%)"}}/>
         <div style={{position:"absolute",bottom:0,left:0,right:0,height:"220px",background:"linear-gradient(to bottom,transparent,#000)"}}/>
         {!isMobile&&<div style={{position:"absolute",fontSize:"440px",lineHeight:1,opacity:0.04,right:"-50px",top:"50%",transform:"translateY(-50%)",animation:"spinSlow 70s linear infinite",pointerEvents:"none",userSelect:"none"}}>🛞</div>}
 
-        <div style={{position:"relative",zIndex:2,opacity:heroVis?1:0,transform:heroVis?"translateY(0)":"translateY(36px)",transition:"opacity 1s ease,transform 1s ease",maxWidth:"600px",width:"100%",paddingTop:isMobile?"72px":"0"}}>
+        <div style={{position:"relative",zIndex:2,opacity:heroVis?1:0,transform:heroVis?"translateY(0)":"translateY(36px)",transition:"opacity 1s ease,transform 1s ease",maxWidth:"600px",width:"100%"}}>
           <div style={{display:"inline-flex",alignItems:"center",gap:"7px",background:"rgba(10,132,255,0.14)",border:"1px solid rgba(10,132,255,0.3)",borderRadius:"50px",padding:"6px 16px",marginBottom:"24px"}}>
             <span style={{width:"6px",height:"6px",borderRadius:"50%",background:"#0A84FF",display:"inline-block",flexShrink:0}}/>
             <span style={{fontSize:isMobile?"9px":"11px",fontWeight:800,letterSpacing:"0.08em",color:"#60aaff",textTransform:"uppercase"}}>Oakland's Premier Tire Shop · Family-Run Since 2001</span>
