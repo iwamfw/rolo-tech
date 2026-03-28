@@ -259,7 +259,7 @@ export default function RoloTech() {
   },[]);
 
   useEffect(()=>{if(menuOpen)setMenuOpen(false);},[scrolled]);
-  const scrollTo=id=>{document.getElementById(id)?.scrollIntoView({behavior:"smooth"});setMenuOpen(false);};
+  const scrollTo=id=>{const target=id==="location"?"hours":id;document.getElementById(target)?.scrollIntoView({behavior:"smooth"});setMenuOpen(false);};
 
   const HOURS=[
     {day:"Monday",    time:"9:00 AM – 6:00 PM", open:true},
@@ -330,7 +330,7 @@ export default function RoloTech() {
         </div>
         {menuOpen&&(
           <div style={{padding:"8px 20px 20px",animation:"slideDown 0.2s ease",borderTop:"1px solid rgba(255,255,255,0.07)"}}>
-            {["services","reviews","hours"].map(s=>(
+            {["services","reviews","hours","location"].map(s=>(
               <button key={s} onClick={()=>scrollTo(s)}
                 style={{display:"block",width:"100%",textAlign:"left",background:"none",border:"none",color:"rgba(255,255,255,0.8)",fontSize:"17px",fontWeight:600,cursor:"pointer",fontFamily:"inherit",textTransform:"capitalize",padding:"14px 0",borderBottom:"1px solid rgba(255,255,255,0.06)"}}>
                 {s.charAt(0).toUpperCase()+s.slice(1)}
@@ -399,7 +399,7 @@ export default function RoloTech() {
 
       {/* WHY ROLO TECH */}
       <section className="split-section" style={{...SEC_WHY,padding:"100px 24px",maxWidth:"1200px",margin:"0 auto",display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))",gap:"56px",alignItems:"center"}}>
-        <div>
+        <div style={{textAlign:isMobile?"center":"left"}}>
           <div style={{fontSize:"13px",fontWeight:700,letterSpacing:"0.18em",color:"#0A84FF",textTransform:"uppercase",marginBottom:"18px"}}>Why Rolo Tech</div>
           <h2 style={{fontSize:"clamp(32px,5vw,52px)",fontWeight:800,letterSpacing:"-0.04em",lineHeight:1.08,marginBottom:"20px",color:"#ffffff"}}>
             The right tire.<br/>The right price.<br/>Right now.
