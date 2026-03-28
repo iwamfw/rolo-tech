@@ -351,7 +351,7 @@ export default function RoloTech() {
         {!isMobile&&<div style={{position:"absolute",fontSize:"440px",lineHeight:1,opacity:0.04,right:"-50px",top:"50%",transform:"translateY(-50%)",animation:"spinSlow 70s linear infinite",pointerEvents:"none",userSelect:"none"}}>🛞</div>}
 
         <div style={{position:"relative",zIndex:2,opacity:heroVis?1:0,transform:heroVis?"translateY(0)":"translateY(36px)",transition:"opacity 1s ease,transform 1s ease",maxWidth:"600px",width:"100%"}}>
-          <div style={{display:"inline-flex",alignItems:"center",gap:"7px",background:"rgba(10,132,255,0.14)",border:"1px solid rgba(10,132,255,0.3)",borderRadius:"50px",padding:"6px 16px",marginBottom:"24px"}}>
+          <div style={{display:"inline-flex",alignItems:"center",gap:"7px",background:"rgba(10,132,255,0.14)",border:"1px solid rgba(10,132,255,0.3)",borderRadius:"50px",padding:"6px 16px",marginBottom:"24px",marginTop:isMobile?"32px":"0"}}>
             <span style={{width:"6px",height:"6px",borderRadius:"50%",background:"#0A84FF",display:"inline-block",flexShrink:0}}/>
             <span style={{fontSize:isMobile?"9px":"11px",fontWeight:800,letterSpacing:"0.08em",color:"#60aaff",textTransform:"uppercase"}}>Oakland's Premier Tire Shop · Family-Run Since 2001</span>
           </div>
